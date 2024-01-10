@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.vistas_de_randy"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.vistas_de_randy"
