@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Ventanas_de_Randy</string>
+    <string name="nombre">Escribe tu nombre</string>
+    <string name="aceptar">Button Aceptar</string>
+    <string name="alumno">Randy</string>
+
+</resources>
