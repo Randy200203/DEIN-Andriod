@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Randy_Menu_Recursos_Menu</string>
+    <string name="edit_action">editar\n</string>
+    <string name="delete_action">Delete\n</string>
+    <string name="share_action">Share</string>
+    <string name="create_pdf_action">Create\n</string>
+    <string name="print_action">Print</string>
+    <string name="send_action">Send</string>
+    <string name="mark_as_paid_action">Mark as paid</string>
+    <string name="search_action">Search</string>
+    <string name="Mostrar_consumo">Mostrar consumo</string>
+    <string name="more_actions_desc">Mas acciones</string>
+    <string name="add_favorites">Parking cerca de mi</string>
+    <string name="share">Buscar parking</string>
+    <string name="move">Pagar parking</string>
+</resources>

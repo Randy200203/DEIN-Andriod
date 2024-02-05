@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="ExtraText">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/edit_action"
+        android:icon="@drawable/baseline_edit_24"
+        android:title="@string/edit_action"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/delete_action"
+        android:icon="@drawable/baseline_delete_24"
+        android:title="@string/delete_action"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/share_action"
+        android:icon="@drawable/baseline_share_24"
+        android:title="@string/share_action"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/create_pdf_action"
+        android:title="@string/create_pdf_action" />
+    <item
+        android:id="@+id/print_action"
+        android:title="@string/print_action" />
+    <item
+        android:id="@+id/send_action"
+        android:title="@string/send_action" />
+    <item
+        android:id="@+id/mark_as_paid_action"
+        android:title="@string/mark_as_paid_action" />
+
+
+</menu>
