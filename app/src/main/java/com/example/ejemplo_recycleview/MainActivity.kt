@@ -15,10 +15,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        recyclerView = findViewById(R.id.recyclerView)
 
         adapter = MyAdapter(myList)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
+
 
         val addButton: Button = findViewById(R.id.addButton)
         addButton.setOnClickListener {
@@ -29,6 +31,9 @@ class MainActivity : AppCompatActivity() {
     private fun addElement() {
         val newItem = "Item ${myList.size + 1}"
         myList.add(newItem)
-        adapter.notifyItemInserted(myList.size - 1)
+        println(newItem.toString())
+        adapter.notifyDataSetChanged()
+
     }
+
 }
