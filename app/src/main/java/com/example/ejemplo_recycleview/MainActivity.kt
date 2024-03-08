@@ -63,8 +63,8 @@ class MainActivity : AppCompatActivity() {
         editTextBuscar.setOnTouchListener { v, event ->
             val DRAWABLE_RIGHT = 2
             if (event.action == MotionEvent.ACTION_UP) {
-                val drawableEnd = (v as EditText).compoundDrawables[DRAWABLE_RIGHT]
-                if (drawableEnd != null && event.rawX >= v.right - drawableEnd.bounds.width()) {
+                val drawableRight = (v as EditText).compoundDrawables[DRAWABLE_RIGHT]
+                if (drawableRight != null && event.rawX >= v.right - drawableRight.bounds.width()) {
                     // Borrar el texto cuando se hace clic en el ícono de cancelar
                     editTextBuscar.text.clear()
                     return@setOnTouchListener true
@@ -72,6 +72,7 @@ class MainActivity : AppCompatActivity() {
             }
             return@setOnTouchListener false
         }
+
     }
 
     private fun addElement() {
