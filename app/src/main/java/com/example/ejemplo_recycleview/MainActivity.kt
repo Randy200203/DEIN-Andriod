@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var editTextBuscar: EditText
 
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint("MissingInflatedId", "ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -50,7 +50,6 @@ class MainActivity : AppCompatActivity() {
                 if (s?.length ?: 0 > 0) {
                     editTextBuscar.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0)
                     editTextBuscar.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.asset_cancel, 0)
-
                 } else {
                     editTextBuscar.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0)
                     editTextBuscar.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_search_24, 0, 0, 0)
@@ -61,15 +60,13 @@ class MainActivity : AppCompatActivity() {
         })
 
         // Agregar el OnClickListener para el ícono de cancelar
-        editTextBuscar.setOnTouchListener { _, event ->
+        editTextBuscar.setOnTouchListener { v, event ->
+            val DRAWABLE_RIGHT = 2
             if (event.action == MotionEvent.ACTION_UP) {
-                // Calcula la posición del clic
-                val drawableEnd = editTextBuscar.compoundDrawablesRelative[2]
-                if (drawableEnd != null && event.rawX >= editTextBuscar.right - drawableEnd.bounds.width()) {
+                val drawableEnd = (v as EditText).compoundDrawables[DRAWABLE_RIGHT]
+                if (drawableEnd != null && event.rawX >= v.right - drawableEnd.bounds.width()) {
                     // Borrar el texto cuando se hace clic en el ícono de cancelar
                     editTextBuscar.text.clear()
-                    editTextBuscar.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0)
-                    editTextBuscar.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.asset_cancel, 0)
                     return@setOnTouchListener true
                 }
             }

@@ -54,7 +54,7 @@
         android:layout_marginEnd="30dp"
         android:background="@drawable/edite_background"
         android:drawableLeft="@drawable/baseline_search_24"
-        android:drawableRight="@drawable/asset_cancel"
+        android:drawableEnd="@drawable/asset_cancel"
         android:drawablePadding="10dp"
         android:hint="Buscar"
         android:inputType="text"
